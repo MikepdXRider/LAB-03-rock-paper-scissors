@@ -1,10 +1,14 @@
+import { getRandomThrow } from './get-random-throw.js';
+
 // import functions and grab DOM elements
 const gameCounterEl = document.querySelector('#win-loss-draw-counter');
 const throwButtonEl = document.querySelector('#throw-button');
 const resetButtonEl = document.querySelector('#reset-button');
 const textOutputEl = document.querySelector('#text-output');
-console.log(gameCounterEl, throwButtonEl, resetButtonEl, textOutputEl);
+// console.log(gameCounterEl, throwButtonEl, resetButtonEl, textOutputEl);
 
+// Imported Function Validation
+// console.log(getRandomThrow());
 
 // initialize global state
 numberOfWins = 0;
