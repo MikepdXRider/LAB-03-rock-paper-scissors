@@ -1,5 +1,6 @@
 // IMPORT MODULES under test here:
 import { didUserWin } from '../utils.js';
+import { getRandomThrow } from '../get-random-throw.js';
 
 const test = QUnit.test;
 
@@ -89,5 +90,15 @@ test('user selects scissors and computer selects rock expecting lose', (expect) 
     expect.equal(actual, expected);
 });
 
+//getRandomThrow Tests
+test('expect a string containing rock, scissors, or paper', (expect) => {
+    
+    const expectedArray = ['rock', 'paper', 'scissors'];
 
+    const expected = true;
+    
+    const actual = expectedArray.includes(getRandomThrow());
+
+    expect.equal(actual, expected);
+});
 
