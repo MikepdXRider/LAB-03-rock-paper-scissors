@@ -1,4 +1,5 @@
 import { getRandomThrow } from './get-random-throw.js';
+import { didUserWin } from './utils.js';
 
 // import functions and grab DOM elements
 const gameCounterEl = document.querySelector('#win-loss-draw-counter');
