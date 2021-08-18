@@ -24,6 +24,7 @@
 ## State
 - numberOfWins = 0;
 - numberOfLoses = 0;
+- numberOfDraws = 0;
 - numberOfResets(games) = 0;
 - Possibly computerThrow = null; (may be a function called within event and assigned to a variable).
 
@@ -35,6 +36,8 @@
     - Compare user input to computerThrow
         - If user input === computerThrow -> tie
             - Update text field.
+            - Increment numberOfDraws.
+            - Update win/loss counter.
         - If user input > computerThrow -> win
             - Update text field.
             - Increment numberOfWins.
@@ -64,3 +67,4 @@
 - Refactor any repeated code into functions.
 
 
+[Image Sources](https://www.stickpng.com/)
