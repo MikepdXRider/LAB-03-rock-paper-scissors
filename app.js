@@ -1,6 +1,7 @@
 import { getRandomThrow } from './get-random-throw.js';
 import { didUserWin, disableThrowEnableReset, displayDrawText, displayLossText, displayWinText, updateGameCounter, resetGame } from './utils.js';
 
+
 // import functions and grab DOM elements
 const gameCounterEl = document.querySelector('#win-loss-draw-counter');
 const throwButtonEl = document.querySelector('#throw-button');
@@ -8,14 +9,13 @@ const resetButtonEl = document.querySelector('#reset-button');
 const textOutputEl = document.querySelector('#text-output');
 // console.log(gameCounterEl, throwButtonEl, resetButtonEl, textOutputEl);
 
-// Imported Function Validation
-// console.log(getRandomThrow());
 
 // initialize global state
 let numberOfWins = 0;
 let numberOfLosses = 0;
 let numberOfDraws = 0;
 let resetCounter = 1;
+
 
 // set event listeners 
 throwButtonEl.addEventListener('click', () => {
@@ -55,7 +55,9 @@ throwButtonEl.addEventListener('click', () => {
 });
 
 resetButtonEl.addEventListener('click', () => {
+
     resetCounter++;
+
     resetGame(throwButtonEl, resetButtonEl, textOutputEl, resetCounter);
 });
 
