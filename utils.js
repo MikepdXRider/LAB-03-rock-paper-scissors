@@ -13,6 +13,8 @@ export function didUserWin(userThrow, computerThrow) {
 
 export function disableThrowEnableReset(element1, element2){
     element1.disabled = true;
+    element1.style.color = 'grey';
+    element1.style.borderColor = 'grey';
     element2.style.display = 'block';
 }
 
@@ -35,7 +37,10 @@ export function updateGameCounter(element6, wins, losses, draws) {
 export function resetGame(element7, element8, element9, rounds){
     element7.disabled = false;
     element8.style.display = 'none';
+    element7.style.color = 'black';
+    element7.style.borderColor = 'black';
     element9.textContent = `Round ${rounds}! Select your desired weapon and click throw to begin!`;
+    
 }
 
 export function validateUserInput(userInput) {

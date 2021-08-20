@@ -57,6 +57,8 @@ throwButtonEl.addEventListener('click', () => {
 });
 
 resetButtonEl.addEventListener('click', () => {
+    const checkedInput = document.querySelector('input:checked');
+    checkedInput.checked = false;
 
     resetCounter++;
 

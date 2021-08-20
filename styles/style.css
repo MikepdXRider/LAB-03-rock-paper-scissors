@@ -73,13 +73,15 @@ input:checked + img {
     color: black;
     background-color: white;
     border-color: black;
+    border: 2px solid black;
     margin: 10px auto;
-
+    cursor: pointer;
+    box-shadow: none;
 }
 
-.button:hover{
+.button:active{
     color: white;
     background-color: black;
     border-color: white;
-    cursor: pointer;
+
 }
