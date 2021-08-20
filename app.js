@@ -1,5 +1,5 @@
 import { getRandomThrow } from './get-random-throw.js';
-import { didUserWin, disableThrowEnableReset, displayDrawText, displayLossText, displayWinText, updateGameCounter, resetGame } from './utils.js';
+import { didUserWin, disableThrowEnableReset, displayText, updateGameCounter, resetGame } from './utils.js';
 
 
 // import functions and grab DOM elements
@@ -36,18 +36,20 @@ throwButtonEl.addEventListener('click', () => {
 
         if (gameResult === 'win'){
             numberOfWins++;
-            displayWinText(textOutputEl, correctAnswer); 
+            // displayWinText(textOutputEl, correctAnswer); 
         }
 
         if (gameResult === 'lose'){
             numberOfLosses++;
-            displayLossText(textOutputEl, correctAnswer);
+            // displayLossText(textOutputEl, correctAnswer);
         }
 
         if (gameResult === 'draw'){
             numberOfDraws++;
-            displayDrawText(textOutputEl, correctAnswer);
+            // displayDrawText(textOutputEl, correctAnswer);
         }
+
+        displayText(gameResult, textOutputEl, correctAnswer);
 
         disableThrowEnableReset(throwButtonEl, resetButtonEl);
         updateGameCounter(gameCounterEl, numberOfWins, numberOfLosses, numberOfDraws);
