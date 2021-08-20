@@ -13,20 +13,22 @@ export function didUserWin(userThrow, computerThrow) {
 
 export function disableThrowEnableReset(element1, element2){
     element1.disabled = true;
+    element1.style.color = 'grey';
+    element1.style.borderColor = 'grey';
     element2.style.display = 'block';
 }
 
-export function displayWinText(element3, compThrow) {
-    element3.textContent = `The computer threw ${compThrow}. You win!`;
-}
+// export function displayWinText(element3, compThrow) {
+//     element3.textContent = `The computer threw ${compThrow}. You win!`;
+// }
 
-export function displayDrawText(element4, compThrow) {
-    element4.textContent = `The computer threw ${compThrow}. It's a draw!`;
-}
+// export function displayDrawText(element4, compThrow) {
+//     element4.textContent = `The computer threw ${compThrow}. It's a draw!`;
+// }
 
-export function displayLossText(element5, compThrow) {
-    element5.textContent = `The computer threw ${compThrow}. You lose!`;
-}
+// export function displayLossText(element5, compThrow) {
+//     element5.textContent = `The computer threw ${compThrow}. You lose!`;
+// }
 
 export function updateGameCounter(element6, wins, losses, draws) {
     element6.textContent = `Win / Loss / Draw : ${wins} / ${losses} / ${draws}`;
@@ -35,11 +37,26 @@ export function updateGameCounter(element6, wins, losses, draws) {
 export function resetGame(element7, element8, element9, rounds){
     element7.disabled = false;
     element8.style.display = 'none';
+    element7.style.color = 'black';
+    element7.style.borderColor = 'black';
     element9.textContent = `Round ${rounds}! Select your desired weapon and click throw to begin!`;
+    
 }
 
 export function validateUserInput(userInput) {
     if (userInput === null) {
         throw new Error('You must select a weapon!');
+    }
+}
+
+export function displayText(didUserWin, someElement, compThrow) {
+    if (didUserWin === 'win') {
+        someElement.textContent = `The computer threw ${compThrow}. You win!`;
+    }
+    if (didUserWin === 'lose') {
+        someElement.textContent = `The computer threw ${compThrow}. You lose!`;
+    }
+    if (didUserWin === 'draw') {
+        someElement.textContent = `The computer threw ${compThrow}. It's a draw!`;
     }
 }
